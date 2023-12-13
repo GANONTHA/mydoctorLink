@@ -13,9 +13,19 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   background: #c9d2db;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
+  transition: all 300ms ease;
+}
+header {
+  display: flex;
+}
+.scroll-up {
+  display: flex;
+}
+.scroll-down {
+  display: none;
 }
 .flex-display {
   display: flex;
@@ -56,7 +66,7 @@ nav {
 
 /* HERO SECTION */
 #hero {
-  height: calc(100dvh - 5.3rem);
+  height: calc(100dvh - 0rem);
   justify-content: space-around;
   background-image: url("assets/images/banner-1.jpg");
   background-repeat: no-repeat;
@@ -73,7 +83,7 @@ nav {
 #hero .header {
   flex-direction: column;
   justify-content: center;
-  padding-top: 2rem;
+  padding-top: 10rem;
   padding-left: 2rem;
 }
 #hero .header .header-title {
@@ -164,4 +174,85 @@ nav {
   background: #00bbdc;
   width: 10rem;
   margin-top: 2rem;
+}
+/* SERVICES */
+#services {
+  height: calc(100dvh - 5.2rem);
+  background: #d3e5eb;
+  padding: 1rem;
+}
+#services.flex-display {
+  flex-direction: column;
+}
+#services .services-list {
+  height: 100%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  grid-row: 5rem;
+  color: #373e48;
+}
+
+#services .services-list .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  background: #cce0e6;
+  text-align: center;
+  border-radius: 0.8rem;
+}
+#services .services-list .item:hover {
+  background: #c4dae1;
+}
+#services .image-doctor-operating {
+  width: 40%;
+  padding-left: 5rem;
+  border-radius: 0.8rem;
+}
+#services .image-doctor-operating img {
+  height: 65dvh;
+  width: 100%;
+  border-radius: 0.8rem;
+}
+img:hover {
+  opacity: 0.8;
+}
+#services .services-content {
+  padding-top: 4rem;
+  width: 100%;
+  overflow: hidden;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#services .about-description {
+  text-align: center;
+}
+
+/* DOCTORS */
+#doctors .doctors-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  grid-row: 5rem;
+  color: #373e48;
+  text-align: center;
+}
+#doctors .details {
+  text-align: center;
+  line-height: 2rem;
+  padding: 1rem;
+  opacity: 0.7;
+}
+#doctors .doctors-list img {
+  height: 200px;
+  width: 230px;
+  border-radius: 5px;
+}
+#doctors .doctors-list .doctor-1 p {
+  align-items: center;
+  width: 20rem;
+  padding-left: 5rem;
 }
