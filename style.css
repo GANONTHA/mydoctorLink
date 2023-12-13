@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
 }
 /* NAV BAR */
 nav {
@@ -48,6 +49,10 @@ header {
   list-style: none;
   margin: 0 1rem;
   padding: 0.7rem 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 .nav-menu ul li:hover {
   color: #00bbdc;
@@ -131,6 +136,20 @@ header {
 }
 .btn:hover {
   opacity: 0.7;
+}
+/* top button */
+
+.arrow {
+  position: fixed;
+  bottom: 1rem;
+  right: 0;
+  z-index: 111;
+  height: 30px;
+  width: 30px;
+  transform: rotate(180deg);
+}
+.arrow img {
+  position: relative;
 }
 /* ABOUT */
 #about {
@@ -255,4 +274,48 @@ img:hover {
   align-items: center;
   width: 20rem;
   padding-left: 5rem;
+}
+/* find a doctor */
+.find-doctor .details {
+  margin: 0;
+}
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem;
+  background: #00bbdc3c;
+  height: 5rem;
+  align-items: center;
+}
+form .btn {
+  background: #00bbdc;
+  width: 7rem;
+  padding: 0.1rem 2rem;
+  height: 2.3rem;
+}
+
+form div input {
+  height: 2rem;
+  padding: 0.3rem 0.3rem;
+  border: 0;
+  background: transparent;
+  margin: 0 1rem;
+  border-radius: 0.1rem;
+  border-bottom: 1px solid #00bbdc;
+}
+form div input:focus {
+  outline: none;
+}
+
+/* BOOK APPOINTEMENT */
+#book-appointment {
+  background: #edeef1;
+  height: calc(100dvh - 5rem);
+}
+#book-appointment form {
+  background: transparent;
+}
+#book-appointment form .btn {
+  width: 10rem;
 }

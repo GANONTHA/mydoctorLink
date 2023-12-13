@@ -13,11 +13,13 @@
         <div class="logo">MYDOCTORLINK</div>
         <div class="nav-menu">
           <ul class="flex-display">
-            <li>Services</li>
-            <li>Doctors</li>
-            <li>Contacts</li>
-            <li>About us</li>
-            <div class="book-appoitment">Book appointment</div>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#doctors">Doctors</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+            <li><a href="#about">About us</a></li>
+            <div class="book-appoitment">
+              <a href="#book-appointment">Book appointment</a>
+            </div>
           </ul>
         </div>
       </nav>
@@ -36,7 +38,7 @@
           <div class="cta-btn flex-display">
             <buttton class="btn find-doctor"> Find a doctor </buttton>
             <buttton class="btn book-an-appointment">
-              Book an appointment
+              <a href="#book-appointment">Book an appointment</a>
             </buttton>
           </div>
         </div>
@@ -44,6 +46,9 @@
           <!-- <img src="assets/images/banner-1.jpg" alt="banner image" /> -->
         </div>
       </section>
+      <a href="#">
+        <img class="arrow" src="assets/icons/arrow.png" alt="top" />
+      </a>
       <!-- ABOUT -->
       <section id="about" class="flex-display">
         <h1 class="about-title title">Who are we ?</h1>
@@ -133,33 +138,52 @@
           We have a team of well qualified health practitioners in almost all
           domaines.
         </p>
-
-        <div class="doctors-list">
-          <div class="doctor-1">
-            <img src="assets/images/doctor-profile-1.jpg" alt="" />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-          </div>
-          <div class="doctor-1">
-            <img src="assets/images/doctor-profile-1.jpg" alt="" />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-          </div>
-          <div class="doctor-1">
-            <img src="assets/images/doctor-profile-1.jpg" alt="" />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-          </div>
-          <div class="doctor-1">
-            <img src="assets/images/doctor-profile-1.jpg" alt="" />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-          </div>
-          <div class="doctor-1">
-            <img src="assets/images/doctor-profile-1.jpg" alt="" />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-          </div>
-          <div class="doctor-1">
-            <img src="assets/images/doctor-profile-1.jpg" alt="" />
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-          </div>
+        <div class="find-doctor">
+          <p class="details">Find a doctor by profesion:</p>
+          <form action="#">
+            <div class="profesion">
+              <label for="profesion">Profesion:</label>
+              <input
+                type="text"
+                placeholder="Profesion"
+                id="profesion"
+                required
+              />
+            </div>
+            <div class="gender">
+              <label for="profesion">Gender:</label>
+              <input type="text" placeholder="Gender" id="gender" />
+            </div>
+            <button class="btn">Search</button>
+          </form>
         </div>
+        <div class="doctors-list">
+          <!-- Added from Javascript -->
+        </div>
+      </section>
+      <section id="book-appointment">
+        <h1 class="title">Book an Appointment</h1>
+
+        <p class="details">
+          Book an appointment now and get yourself served. Our doctors are ready
+          and waiting for your call.
+        </p>
+        <form action="#">
+          <div class="profesion">
+            <label for="profesion">Profesion:</label>
+            <input
+              type="text"
+              placeholder="Profesion"
+              id="profesion"
+              required
+            />
+          </div>
+          <div class="gender">
+            <label for="profesion">Gender:</label>
+            <input type="text" placeholder="Gender" id="gender" />
+          </div>
+          <button class="btn">Book now</button>
+        </form>
       </section>
     </main>
     <script src="app.js"></script>
