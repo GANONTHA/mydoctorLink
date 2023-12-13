@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* NAV BAR */
+nav {
+  height: 5.3rem;
+  width: 100%;
+  padding: 0.2rem;
+  padding-top: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #c9d2db;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.flex-display {
+  display: flex;
+}
+.logo {
+  flex: 2;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #00bbdc;
+  cursor: pointer;
+}
+.nav-menu {
+  flex: 3;
+}
+.nav-menu ul {
+  flex-direction: row;
+  justify-content: center;
+}
+.nav-menu ul li {
+  list-style: none;
+  margin: 0 1rem;
+  padding: 0.7rem 0;
+}
+.nav-menu ul li:hover {
+  color: #00bbdc;
+}
+.book-appoitment {
+  margin: 0 0 0 9rem;
+  color: #fff;
+  font-weight: bolder;
+  padding: 0.7rem 1rem;
+  background: #373e48;
+  border-radius: 19px;
+}
+.book-appoitment:hover {
+  background: #707b8b;
+}
+
+/* HERO SECTION */
+#hero {
+  height: calc(100dvh - 5.3rem);
+  justify-content: space-around;
+  background-image: url("assets/images/banner-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#hero .banner,
+.header {
+  height: 60vh;
+  width: 50%;
+  align-items: center;
+}
+
+#hero .header {
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-left: 2rem;
+}
+#hero .header .header-title {
+  margin: 1rem;
+  text-align: left;
+}
+.title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 35px;
+  font-weight: 100;
+  text-align: center;
+}
+#hero .header .header-details {
+  margin: 1rem;
+  font-size: 24px;
+  line-height: 2rem;
+  opacity: 0.7;
+}
+
+/* button */
+.cta-btn {
+  width: 100%;
+  padding-top: 2rem;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.btn.find-doctor {
+  color: #00bbdc;
+  background: #fff;
+}
+
+.btn.book-an-appointment {
+  color: #fff;
+  background: #f60102;
+}
+
+.btn {
+  color: #fff;
+  font-weight: 100;
+  padding: 0.9rem 1.3rem;
+  background: transparent;
+  border-radius: 19px;
+  border: 0;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.7;
+}
+/* ABOUT */
+#about {
+  padding-top: 1rem;
+  margin: 0 1rem;
+  height: calc(100dvh - 5.3rem);
+}
+#about.flex-display {
+  flex-direction: column;
+}
+#about .about-content {
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+#about .about-description {
+  width: 40%;
+  text-align: justify;
+  margin: 2rem auto;
+  opacity: 0.7;
+  line-height: 1.2rem;
+}
+/* #about .about-description .details {
+} */
+#about .about-image {
+  width: 50%;
+}
+#about .about-image img {
+  height: 400px;
+  width: 90%px;
+  border-radius: 0.7rem;
+}
+#about .title {
+  padding: 1rem;
+}
+.name {
+  color: #00bbdc;
+  cursor: pointer;
+}
+#about .about-description .btn {
+  background: #00bbdc;
+  width: 10rem;
+  margin-top: 2rem;
+}

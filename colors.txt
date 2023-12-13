@@ -1,0 +1,7 @@
+1. blue: #00BBDC
+2. btn-2-black: #4C535E
+3. bg-2: #D3E5EB
+4. btn-1: #E1B4B1
+5. bg-3: #F5F3F2
+6. bg-1: #FFFFFF
+7. bg-footer: #2C3542

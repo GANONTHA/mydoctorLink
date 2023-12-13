@@ -9,7 +9,7 @@ _Details_: Our society expands everyday at a rapid rate which makes people to li
 
 For now we are just limited to getting doctor and patient connected together and in future we'll expand the features by adding the a chatbot and online video call.
 
-_Tech Stack_: The website will be developed using React Js and Bootstrap. We will write some tests using React testing librairy and Jest.
+_Tech Stack_: The website will be developed using HTML, CSS JavaScript . We will write some tests using Jest.
 _Dev Technique_: The website will be a Single Page Application (SPA) and mobile first development process
 _Styling AND colors_: the fonts and color palette will be decided later.
-_menu links_: Home, About Us, Find a Doctor, Contacts
+_menu links_: Services, About Us, Doctors, Contacts
