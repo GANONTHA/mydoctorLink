@@ -133,6 +133,7 @@ a {
   border-radius: 19px;
   border: 0;
   cursor: pointer;
+  display: inline;
 }
 .btn:hover {
   opacity: 0.7;
@@ -160,17 +161,25 @@ a {
 #about.flex-display {
   flex-direction: column;
 }
+.details {
+  opacity: 0.7;
+  text-align: center;
+  padding: 1rem;
+}
 #about .about-content {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
 }
-#about .about-description {
+#about .about-description .details {
   width: 40%;
-  text-align: justify;
+  /* text-align: justify; */
   margin: 2rem auto;
   opacity: 0.7;
   line-height: 1.2rem;
+}
+#about .about-description p {
+  text-align: justify;
 }
 /* #about .about-description .details {
 } */
@@ -258,6 +267,7 @@ img:hover {
   grid-row: 5rem;
   color: #373e48;
   text-align: center;
+  padding-bottom: 2rem;
 }
 #doctors .details {
   text-align: center;
@@ -295,7 +305,8 @@ form .btn {
   height: 2.3rem;
 }
 
-form div input {
+form div input,
+select {
   height: 2rem;
   padding: 0.3rem 0.3rem;
   border: 0;
@@ -311,11 +322,79 @@ form div input:focus {
 /* BOOK APPOINTEMENT */
 #book-appointment {
   background: #edeef1;
-  height: calc(100dvh - 5rem);
+  height: calc(80dvh - 5rem);
+  padding: 1rem;
+  padding-top: 5rem;
+}
+
+option {
+  opacity: 0.7;
+  text-align: center;
+  padding: 1rem;
+}
+#book-appointment option:active {
+  border: 0;
+}
+#book-appointment option:focus,
+select:focus {
+  outline: none;
 }
 #book-appointment form {
   background: transparent;
 }
 #book-appointment form .btn {
   width: 10rem;
+}
+
+/* CONTACTS */
+#contacts {
+  height: 110dvh;
+  padding: 1rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 2rem;
+}
+/* #contacts .details {
+  margin: 0;
+  padding: 0;
+} */
+#contacts form {
+  flex-direction: column;
+  background: transparent;
+  justify-content: start;
+}
+#contacts form input {
+  width: 75%;
+}
+#contacts form div {
+  margin: 0.1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  padding: 0.7rem;
+}
+#contacts textarea,
+#contacts textarea:focus {
+  outline: none;
+  opacity: 0.7;
+  padding: 2rem 1rem;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+#contacts .bttn {
+  margin: 0;
+  width: 7rem;
+  padding: 0.4rem 1rem;
+  color: #fff;
+  font-weight: 100;
+  background: #00bbdc;
+  border-radius: 19px;
+
+  border: 0;
+  cursor: pointer;
+}
+
+.bttn:hover {
+  opacity: 0.7;
 }

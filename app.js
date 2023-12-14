@@ -128,5 +128,19 @@ function renderDoctorsList() {
     `;
   });
 }
-
 renderDoctorsList();
+
+// Disable the contact send button if the message is empty
+
+// const textArea = document.querySelector("#text-area");
+const textAArea = document.getElementById("first-name");
+const sendBtn = document.querySelector(".bttn");
+
+textAArea.value.length <= 0
+  ? sendBtn.setAttribute("disabled", "")
+  : sendBtn.removeAttribute("disabled");
+textAArea.addEventListener("input", () => {
+  textAArea.value.length <= 0
+    ? sendBtn.setAttribute("disabled", "")
+    : sendBtn.removeAttribute("disabled");
+});

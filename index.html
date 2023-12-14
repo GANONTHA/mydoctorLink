@@ -29,14 +29,18 @@
       <!-- HERO SECTION -->
       <section id="hero" class="flex-display">
         <div class="header flex-display">
-          <h1 class="header-title title">Healthcare for rural communities!</h1>
+          <h1 class="header-title title">
+            Healthcare for the rural communities!
+          </h1>
           <p class="header-details">
             We believe that, distance should not be an obstacle in getting
             access to healthcare. Everyone deserves and got the right to get
             treatement equaly, anytime and anywhere.
           </p>
           <div class="cta-btn flex-display">
-            <buttton class="btn find-doctor"> Find a doctor </buttton>
+            <buttton class="btn find-doctor">
+              <a href="#find-doctor">Find a doctor </a>
+            </buttton>
             <buttton class="btn book-an-appointment">
               <a href="#book-appointment">Book an appointment</a>
             </buttton>
@@ -59,8 +63,8 @@
               alt="doctor and patient happy together"
             />
           </div>
-          <div class="about-description">
-            <p class="details">
+          <div class="about-description details">
+            <p>
               <span class="name">MyDoctorLink</span> is a platform that has the
               unique goal of connecting rural communities to doctors. We believe
               that distance should not be an obstacle nor a barriere to access
@@ -138,7 +142,7 @@
           We have a team of well qualified health practitioners in almost all
           domaines.
         </p>
-        <div class="find-doctor">
+        <div class="find-doctor" id="find-doctor">
           <p class="details">Find a doctor by profesion:</p>
           <form action="#">
             <div class="profesion">
@@ -169,20 +173,63 @@
           and waiting for your call.
         </p>
         <form action="#">
-          <div class="profesion">
-            <label for="profesion">Profesion:</label>
+          <div class="name_">
+            <label for="profesion">Name:</label>
             <input
               type="text"
-              placeholder="Profesion"
-              id="profesion"
+              placeholder="Enter your name"
+              id="name"
               required
             />
           </div>
-          <div class="gender">
-            <label for="profesion">Gender:</label>
-            <input type="text" placeholder="Gender" id="gender" />
+          <div class="location">
+            <label for="location">Location:</label>
+            <select name="location" id="location">
+              <option value="niamey">Ndjamena</option>
+              <option value="niamey">Moundou</option>
+              <option value="niamey">Kelo</option>
+              <option value="niamey">Abeche</option>
+              <option value="niamey">Ati</option>
+            </select>
+            <label for="date">Date</label>
+            <input type="date" placeholder="Date" id="date" />
           </div>
           <button class="btn">Book now</button>
+        </form>
+      </section>
+      <section id="contacts">
+        <h1 class="title">Reach out to Us</h1>
+        <p class="details">Have a question ? Reach out to us via this form</p>
+
+        <form action="#">
+          <div class="first-name">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" required />
+          </div>
+          <div class="last-name">
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" />
+          </div>
+          <div class="phone">
+            <label for="phone">Phone number:</label>
+            <input type="text" id="phone" required />
+          </div>
+          <div class="location">
+            <label for="location">Location:</label>
+            <select name="location" id="location">
+              <option value="niamey">Ndjamena</option>
+              <option value="niamey">Moundou</option>
+              <option value="niamey">Kelo</option>
+              <option value="niamey">Abeche</option>
+              <option value="niamey">Ati</option>
+            </select>
+          </div>
+          <div class="text-area">
+            <label for="text-area">Message:</label>
+            <textarea name="message" id="text-area" cols="70" rows="3" required>
+            </textarea>
+          </div>
+          <button class="bttn" type="submit">Send</button>
         </form>
       </section>
     </main>
