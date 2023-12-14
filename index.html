@@ -139,7 +139,7 @@
         </p>
         <div class="find-doctor" id="find-doctor">
           <p class="details">Find a doctor by profesion:</p>
-          <form action="#">
+          <form action="#gender">
             <div class="profesion">
               <label for="profesion">Profesion:</label>
               <input
@@ -153,13 +153,14 @@
               <label for="profesion">Gender:</label>
               <input type="text" placeholder="Gender" id="gender" />
             </div>
-            <button class="btn">Search</button>
+            <button id="search-doctor" class="btn">Search</button>
           </form>
         </div>
         <div class="doctors-list">
           <!-- Added from Javascript -->
         </div>
       </section>
+
       <section id="book-appointment">
         <h1 class="title">Book an Appointment</h1>
 
@@ -167,7 +168,8 @@
           Book an appointment now and get yourself served. Our doctors are ready
           and waiting for your call.
         </p>
-        <form action="#">
+
+        <form action="#book-appointment" id="booking-form">
           <div class="name_">
             <label for="profesion">Name:</label>
             <input
@@ -189,14 +191,14 @@
             <label for="date">Date</label>
             <input type="date" placeholder="Date" id="date" />
           </div>
-          <button class="btn">Book now</button>
+          <button class="btn" id="booking-btn">Book now!</button>
         </form>
       </section>
       <section id="contacts">
         <h1 class="title">Reach out to Us</h1>
         <p class="details">Have a question ? Reach out to us via this form</p>
 
-        <form action="#">
+        <form action="#contacts" id="contact-form">
           <div class="first-name">
             <label for="first-name">First Name:</label>
             <input type="text" id="first-name" required />
@@ -224,7 +226,7 @@
             <textarea name="message" id="text-area" cols="70" rows="3" required>
             </textarea>
           </div>
-          <button class="bttn" type="submit">Send</button>
+          <button id="contact-btn" class="bttn">Send</button>
         </form>
       </section>
       <section id="events">

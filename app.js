@@ -130,9 +130,38 @@ function renderDoctorsList() {
 }
 renderDoctorsList();
 
+// Search doctor
+const searchBtn = document.getElementById("search-doctor");
+const profesion = document.getElementById("profesion");
+function search(text) {
+  doctorsList.innerHTML = "";
+  const docs = doctors.filter(
+    (doctor) => doctor.description.toLocaleLowerCase().includes(text)
+    // doctor.gender.toLocaleLowerCase().includes(text.toLocaleLowerCase())
+  );
+  if (docs.length > 0) {
+    docs.forEach((doctor) => {
+      doctorsList.innerHTML += `
+        <div class="doctor-1">
+            <img src="${doctor.image}" alt="" />
+            <p>${doctor.description}<p>
+        </div>
+    `;
+    });
+  } else {
+    doctorsList.innerHTML = `
+   <div>
+    <p>No doctor matches the search input</p>
+   </div>
+   `;
+  }
+}
+searchBtn.addEventListener("click", () => {
+  search(profesion.value);
+  // profesion.value = "";
+});
 // Disable the contact send button if the message is empty
 
-// const textArea = document.querySelector("#text-area");
 const textAArea = document.getElementById("first-name");
 const sendBtn = document.querySelector(".bttn");
 
@@ -226,3 +255,36 @@ function renderFeeds() {
 }
 
 renderFeeds();
+
+// Book an appointment
+
+const bookBtn = document.getElementById("booking-btn");
+const nameField = document.getElementById("name");
+const bookingForm = document.getElementById("booking-form");
+
+bookBtn.addEventListener("click", () => {
+  bookBtn.innerHTML = "booking...";
+  setTimeout(() => {
+    bookBtn.innerHTML = "Booked";
+  }, 1000);
+  setTimeout(() => {
+    bookBtn.innerHTML = "Book now!";
+    bookingForm.reset();
+  }, 1500);
+});
+
+// Contacts
+
+const contactForm = document.getElementById("contact-form");
+const contactBtn = document.getElementById("contact-btn");
+
+contactBtn.addEventListener("click", () => {
+  contactBtn.innerHTML = "sending...";
+  setTimeout(() => {
+    contactBtn.innerHTML = "sent";
+  }, 1000);
+  setTimeout(() => {
+    contactBtn.innerHTML = "Send";
+    contactForm.reset();
+  }, 1500);
+});
