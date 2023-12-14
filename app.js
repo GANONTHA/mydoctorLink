@@ -144,3 +144,85 @@ textAArea.addEventListener("input", () => {
     ? sendBtn.setAttribute("disabled", "")
     : sendBtn.removeAttribute("disabled");
 });
+
+//Display the events feeds
+
+const events = [
+  {
+    id: 1,
+    title: "Workshop",
+    date: "Nov. 23, 2023",
+    time: "11:00 AM",
+    speaker: "Watkins Brian",
+    topic: "Malaria Prevention",
+    description:
+      "Prevention and avoiding malaria in rural communities. Practice and more to cover",
+    place: "Pala",
+    feature: "Emergency, Medicine",
+    cost: "$300",
+    bg: "#373e48",
+  },
+  {
+    id: 2,
+    title: "Workshop",
+    date: "Dec. 23, 2023",
+    time: "10:00 AM",
+    speaker: "Hedmon Saka",
+    topic: "Paediatric Emergencies",
+    description:
+      "This Rural Health workshop is one day woarkshop in paediatric emergency scenarios and skills. It will give delegates real-life examples",
+    // "Prevention and avoiding malaria in rural communities. Practice and more to cover",
+    place: "Moudou",
+    feature: "Paediatric,Medicine",
+    cost: "$200",
+    bg: "#8996A0",
+  },
+  {
+    id: 3,
+    title: "Workshop",
+    date: "Jan. 5, 2024",
+    time: "11:00 AM",
+    speaker: "Perth Leno",
+    topic: "Rural Emergency Training",
+    description:
+      "This workshop on Rural Emergency and advanced training is designed to help participants know the primarly actions to take in case of an emergency case.",
+    // "Prevention and avoiding malaria in rural communities. Practice and more to cover",
+    place: "Kelo",
+    feature: "Emergency, Medicine",
+    cost: "$500",
+    bg: "#82786F",
+  },
+];
+const eventsFeeds = document.querySelector(".events-feeds");
+
+function renderFeeds() {
+  events.forEach((ev) => {
+    eventsFeeds.innerHTML += `
+  
+  <div class="events-list flex-display" style='background: ${ev.bg}'>
+          <div class="event-header flex-display">
+            <div class="date">${ev.date} <br/> ${ev.time}</div>
+            <div class="event-title">${ev.title}</div>
+          </div>
+          <div class="topic-speaker flex-display">
+            <div class="topic">${ev.topic}</div>
+            <div class="speaker">${ev.speaker}</div>
+          </div>
+          <div class="event-body flex-display">
+            <p class="description">
+             ${ev.description}
+            </p>
+            <p class="place">${ev.place}</p>
+            <div class="feature">${ev.feature}</div>
+            <div class="cost">${ev.cost}</div>
+          </div>
+          <div class="event-footer flex-display">
+            <button class="btn" style='color:#00bbdc'>Sign up</button>
+            <button class="donate btn">Donate</button>
+          </div>
+        </div>
+  `;
+  });
+}
+
+renderFeeds();
