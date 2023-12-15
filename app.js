@@ -288,3 +288,16 @@ contactBtn.addEventListener("click", () => {
     contactForm.reset();
   }, 1500);
 });
+
+//Burger menu
+
+const burgerMenu = document.querySelector(".burger-menu");
+const spans = document.querySelectorAll(".burger-menu");
+const navMenu = document.querySelector(".nav-menu");
+
+burgerMenu.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+  spans.forEach((span) => {
+    span.classList.toggle("open");
+  });
+});
