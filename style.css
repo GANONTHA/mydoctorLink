@@ -325,7 +325,7 @@ select {
   background: transparent;
   margin: 0 1rem;
   border-radius: 0.1rem;
-  border-bottom: 1px solid #00bbdc;
+  border-bottom: 2px solid #00bbdc;
 }
 form div input:focus {
   outline: none;
@@ -413,10 +413,7 @@ select:focus {
   padding-bottom: 3rem;
   margin-bottom: 2rem;
 }
-/* #contacts .details {
-  margin: 0;
-  padding: 0;
-} */
+
 #contacts form {
   flex-direction: column;
   background: transparent;
@@ -463,7 +460,6 @@ select:focus {
   height: calc(100dvh - 5.3rem);
   flex-direction: column;
   background: #b2d9e0;
-  /* padding: 0 3rem; */
 }
 #events .title {
   padding: 2rem;
@@ -473,7 +469,6 @@ select:focus {
   flex-direction: column;
   justify-content: space-between;
   width: 30%;
-  /* background: ; */
   color: #fff;
   border-radius: 10px;
   padding: 1rem;
@@ -575,9 +570,7 @@ footer {
   height: 25%;
   padding-top: 1rem;
 }
-li {
-  list-style: none;
-}
+
 .col-2 form {
   flex-direction: row;
   justify-content: space-between;
@@ -601,7 +594,7 @@ li {
 .social-icons img {
   width: 40px;
   height: 40px;
-  padding-top: 0.1rem;
+  margin-top: 0.1rem;
   cursor: pointer;
 }
 .copy-right {
@@ -655,8 +648,273 @@ li {
   transform: none;
 }
 /*BREAKPOINTS: 576px, 768px, 992px, and 1200px  */
+@media screen and (max-device-width: 468px) {
+  /* NAV BAR */
+  nav {
+    background: #fff;
+    position: fixed;
+    height: 5rem;
+  }
+  nav .logo {
+    font-size: 20px;
+    padding-top: 0.1rem;
+  }
+  .nav-menu {
+    display: none;
+  }
+  #book-appointment-menu {
+    visibility: hidden;
+  }
+  .burger-menu {
+    display: flex;
 
-@media screen and (max-device-width: 576px) {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    position: absolute;
+    right: 5rem;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    background: #58c9e03e;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+  }
+  /* HERO SECTION */
+
+  #hero {
+    width: 100%;
+  }
+  #hero .header {
+    width: 100%;
+    height: 100dvh;
+    padding-top: 0;
+  }
+  #hero .banner {
+    display: none;
+  }
+  #hero .header .header-title {
+    margin: 0rem;
+  }
+  #hero .title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+  }
+  #hero .header .header-details {
+    font-size: 27px;
+    line-height: 2.1rem;
+    opacity: 1;
+  }
+  /* buttons */
+  .btn {
+    font-weight: 400;
+    font-size: 15px;
+  }
+
+  /* ABOUT */
+  #about {
+    width: 100%;
+    height: fit-content;
+  }
+  #about .about-content {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+  #about .about-image {
+    width: 95%;
+    padding: 0;
+    margin: 0;
+  }
+  #about .about-image img {
+    height: 40dvh;
+    width: 100%;
+    border-radius: 0.4rem;
+  }
+  #about .about-description p {
+    font-size: 20px;
+  }
+
+  /* SERVICES */
+  #services {
+    height: fit-content;
+    font-size: 20px;
+  }
+  #services .services-content {
+    flex-direction: column;
+  }
+  #services .services-list .item {
+    margin: 0;
+  }
+  #services .image-doctor-operating {
+    width: 100%;
+    padding-left: 0rem;
+    border-radius: 0.4rem;
+  }
+  #services .image-doctor-operating img {
+    height: 35dvh;
+    width: 100%;
+    border-radius: 0.4rem;
+  }
+  #services .services-list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+  }
+  #services .services-list .item {
+    width: 40%;
+    font-size: 20px;
+  }
+  /* DOCTORS */
+  #doctors {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  #doctors .details {
+    font-size: 24px;
+  }
+  #doctors .doctors-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-left: 1rem;
+    padding-bottom: 2rem;
+  }
+  #doctors .doctors-list img {
+    width: 100%;
+  }
+  .doctor-1 {
+    font-size: 20px;
+  }
+
+  form {
+    flex-direction: column;
+    height: fit-content;
+    padding-bottom: 1rem;
+    width: 100%;
+    margin: 0;
+  }
+  form div input {
+    margin: 1rem;
+  }
+  /* BOOK APP */
+  #book-appointment {
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+  #book-appointment form {
+    flex-wrap: wrap;
+  }
+  #book-appointment form input,
+  select {
+    font-size: 17px;
+    width: 65%;
+  }
+  #book-appointment form label {
+    font-size: 20px;
+  }
+  /* CONTACTS */
+  #contacts {
+    height: fit-content;
+    padding: 0;
+    padding-bottom: 1rem;
+  }
+  #contacts form input {
+    width: 100%;
+  }
+  #contacts form div {
+    margin: 0.5rem;
+    width: 80%;
+    padding: 0rem;
+    font-size: 17px;
+  }
+  #contacts form div label {
+    width: 90%;
+  }
+  #contacts textarea,
+  #contacts textarea:focus {
+    font-size: 20px;
+  }
+  #contacts .bttn {
+    font-size: 20px;
+    width: 9rem;
+  }
+  /* EVENTS */
+  #events {
+    height: fit-content;
+  }
+  .events-feeds {
+    flex-direction: column;
+  }
+  .events-list {
+    width: 90%;
+  }
+  .event-header .event-title {
+    height: 2rem;
+    font-size: 15px;
+  }
+  .event-body p,
+  div {
+    font-size: 20px;
+  }
+
+  /* FOOTER */
+  footer {
+    height: fit-content;
+  }
+  .footer-body {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .footer-body .col-1,
+  .col-2 {
+    width: 100%;
+    padding: 0;
+    border: 0;
+  }
+  .col-2 form {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+  .footer-body .col-1 {
+    font-size: 18px;
+  }
+  .footer-body .col-2 {
+    font-size: 25px;
+  }
+  .col-2 form input {
+    padding: 0 1rem;
+    width: 60%;
+    height: 2.5rem;
+    font-size: 18px;
+  }
+  footer .btn {
+    width: 30%;
+  }
+  .social-icons img {
+    width: 45px;
+    height: 45px;
+    margin: 1rem;
+  }
+}
+@media screen and (min-device-width: 467px) and (max-device-width: 576px) {
   /* NAV BAR */
   nav {
     background: #fff;
@@ -733,11 +991,13 @@ li {
     width: 100%;
   }
   #about .about-image {
-    width: 70%;
+    width: 95%;
+    padding: 0;
+    margin: 0;
   }
   #about .about-image img {
     height: 40dvh;
-    width: 100%px;
+    width: 100%;
     border-radius: 0.4rem;
   }
   #about .about-description p {
@@ -773,12 +1033,14 @@ li {
   }
   #services .services-list .item {
     width: 40%;
+    font-size: 20px;
   }
   /* DOCTORS */
   #doctors {
     width: 100vw;
     padding: 0;
     margin: 0;
+    overflow: hidden;
   }
   #doctors .details {
     font-size: 24px;
@@ -790,23 +1052,125 @@ li {
     padding: 0;
     margin: 0;
     margin-left: 5rem;
+    padding-bottom: 2rem;
   }
   #doctors .doctors-list img {
     width: 100%;
+  }
+  .doctor-1 {
+    font-size: 20px;
   }
 
   form {
     flex-direction: column;
     height: fit-content;
     padding-bottom: 1rem;
+    width: 100%;
   }
   form div input {
     margin: 1rem;
   }
+  /* BOOK APP */
+  #book-appointment {
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+  #book-appointment form {
+    flex-wrap: wrap;
+  }
+  #book-appointment form input,
+  select {
+    font-size: 17px;
+    width: 65%;
+  }
+  #book-appointment form label {
+    font-size: 20px;
+  }
+  /* CONTACTS */
+  #contacts {
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+  #contacts form input {
+    width: 100%;
+  }
+  #contacts form div {
+    margin: 0.5rem;
+    width: 80%;
+    padding: 0rem;
+    font-size: 17px;
+  }
+  #contacts form div label {
+    width: 40%;
+  }
+  #contacts textarea,
+  #contacts textarea:focus {
+    font-size: 20px;
+  }
+  #contacts .bttn {
+    font-size: 20px;
+    width: 9rem;
+  }
+  /* EVENTS */
   #events {
-    display: none;
+    height: fit-content;
+  }
+  .events-feeds {
+    flex-direction: column;
+  }
+  .events-list {
+    width: 90%;
+  }
+  .event-header .event-title {
+    height: 2.2rem;
+  }
+  .event-body p,
+  div {
+    font-size: 20px;
+  }
+
+  /* FOOTER */
+  footer {
+    height: fit-content;
+  }
+  .footer-body {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .footer-body .col-1,
+  .col-2 {
+    width: 100%;
+    padding: 0;
+    border: 0;
+  }
+  .col-2 form {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+  .footer-body .col-1 {
+    font-size: 18px;
+  }
+  .footer-body .col-2 {
+    font-size: 25px;
+  }
+  .col-2 form input {
+    padding: 0 1rem;
+    width: 60%;
+    height: 2.5rem;
+    font-size: 18px;
+  }
+  footer .btn {
+    width: 30%;
+  }
+  .social-icons img {
+    width: 45px;
+    height: 45px;
+    margin: 1rem;
   }
 }
+
 /* @media screen and (min-device-width: 577px) and (max-device-width: 768px) {
   body {
     background: blue;

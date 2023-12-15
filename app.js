@@ -294,10 +294,21 @@ contactBtn.addEventListener("click", () => {
 const burgerMenu = document.querySelector(".burger-menu");
 const spans = document.querySelectorAll(".burger-menu");
 const navMenu = document.querySelector(".nav-menu");
+const navUl = document.querySelector(".nav-menu ul");
+const navLinks = document.querySelectorAll(".nav-menu ul li");
 
 burgerMenu.addEventListener("click", () => {
   navMenu.classList.toggle("open");
   spans.forEach((span) => {
     span.classList.toggle("open");
+  });
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
+    spans.forEach((span) => {
+      span.classList.toggle("open");
+    });
   });
 });
