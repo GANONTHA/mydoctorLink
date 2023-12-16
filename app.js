@@ -246,7 +246,7 @@ function renderFeeds() {
             <div class="cost">${ev.cost}</div>
           </div>
           <div class="event-footer flex-display">
-            <button class="btn" style='color:#00bbdc'>Sign up</button>
+            <button class="btn" style='color:#00bbdc'> <a href='#sign-up'> Sign up</a></button>
             <button class="donate btn">Donate</button>
           </div>
         </div>
