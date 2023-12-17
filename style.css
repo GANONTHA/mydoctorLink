@@ -50,6 +50,9 @@ header {
   margin: 0 1rem;
   padding: 0.7rem 0;
 }
+.mobile {
+  display: none;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -164,7 +167,7 @@ a {
 #about {
   padding-top: 1rem;
   margin: 0 1rem;
-  height: calc(100dvh - 5.3rem);
+  height: fit-content;
 }
 #about.flex-display {
   flex-direction: column;
@@ -214,7 +217,7 @@ a {
 }
 /* SERVICES */
 #services {
-  height: calc(100dvh - 5.2rem);
+  height: 85dvh;
   background: #d3e5eb;
   padding: 1rem;
 }
@@ -222,7 +225,7 @@ a {
   flex-direction: column;
 }
 #services .services-list {
-  height: 100%;
+  height: 50%;
   width: 50%;
   display: grid;
   grid-template-columns: auto auto;
@@ -237,6 +240,7 @@ a {
   align-items: center;
   justify-content: center;
   margin: 1rem;
+  margin-top: 5rem;
   background: #cce0e6;
   text-align: center;
   border-radius: 0.8rem;
@@ -250,7 +254,7 @@ a {
   border-radius: 0.8rem;
 }
 #services .image-doctor-operating img {
-  height: 65dvh;
+  height: 90%;
   width: 100%;
   border-radius: 0.8rem;
 }
@@ -662,6 +666,9 @@ footer {
   .nav-menu {
     display: none;
   }
+  .mobile {
+    display: flex;
+  }
   #book-appointment-menu {
     visibility: hidden;
   }
@@ -675,6 +682,9 @@ footer {
     position: absolute;
     top: 1rem;
     right: 1rem;
+  }
+  .desktop {
+    display: none;
   }
   .nav-menu ul {
     flex-direction: column;
@@ -928,6 +938,12 @@ footer {
   .nav-menu {
     display: none;
   }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
   #book-appointment-menu {
     visibility: hidden;
   }
@@ -1180,6 +1196,12 @@ footer {
   nav .logo {
     font-size: 40px;
     padding-top: 2rem;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
   }
   .nav-menu {
     display: none;
@@ -1485,6 +1507,12 @@ footer {
   .nav-menu {
     display: none;
   }
+  .mobile {
+    display: flex;
+  }
+  .desktop {
+    display: none;
+  }
   #book-appointment-menu {
     visibility: hidden;
   }
@@ -1578,13 +1606,14 @@ footer {
     margin: 0;
   }
   #services .image-doctor-operating {
+    display: flex;
     width: 100%;
-    padding-left: 0rem;
+    padding-left: 13rem;
     border-radius: 0.4rem;
   }
   #services .image-doctor-operating img {
-    height: 35dvh;
-    width: 100%;
+    height: 39dvh;
+    width: 70%;
     border-radius: 0.4rem;
   }
   #services .services-list {
@@ -1717,9 +1746,10 @@ footer {
   }
   .events-feeds {
     flex-direction: column;
+    margin-left: 9rem;
   }
   .events-list {
-    width: 90%;
+    width: 70%;
   }
   .event-header .event-title {
     height: 2.2rem;
@@ -1736,6 +1766,8 @@ footer {
   /* FOOTER */
   footer {
     height: fit-content;
+    padding: 4rem;
+    padding-bottom: 0.3rem;
   }
   .footer-body {
     flex-direction: column;
@@ -1777,14 +1809,328 @@ footer {
     font-size: 19px;
   }
 }
+@media screen and (min-device-width: 993px) and (max-device-width: 1200px) {
+  /* NAV BAR */
+  nav {
+    background: #fff;
+    position: fixed;
+    height: 7rem;
+  }
+  nav .logo {
+    font-size: 40px;
+    padding-top: 2rem;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+  .nav-menu {
+    display: none;
+  }
+  #book-appointment-menu {
+    visibility: hidden;
+  }
+  .burger-menu {
+    display: flex;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    position: absolute;
+    right: 5rem;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    background: #58c9e03e;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    width: 100%;
+  }
+  /* HERO SECTION */
 
-/* @media screen and (min-device-width: 769px) and (max-device-width: 992px) {
-  body {
-    background: orange;
+  #hero {
+    width: 100%;
+  }
+  #hero .header {
+    width: 100%;
+    height: 100dvh;
+    padding-top: 0;
+  }
+  #hero .banner {
+    display: none;
+  }
+  #hero .header .header-title {
+    margin: 0rem;
+  }
+  #hero .title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+  }
+  #hero .header .header-details {
+    font-size: 29px;
+    line-height: 2.5rem;
+    opacity: 1;
+  }
+  /* buttons */
+  .btn {
+    font-weight: 400;
+    font-size: 20px;
+  }
+  #hero .btn {
+    font-size: 24px;
+    margin-top: 2rem;
+  }
+
+  /* ABOUT */
+  #about {
+    width: 100%;
+    /* padding: 1rem; */
+    height: fit-content;
+  }
+  #about .about-content {
+    flex-direction: row;
+    /* justify-content: center; */
+    width: 100%;
+    text-wrap: wrap;
+  }
+  #about .about-image {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  #about .about-image img {
+    height: 40dvh;
+    width: 100%;
+    margin-top: 10rem;
+    border-radius: 0.4rem;
+  }
+  #about .about-description {
+    width: 100%;
+  }
+  #about .about-description p {
+    font-size: 25px;
+  }
+
+  /* SERVICES */
+  #services {
+    height: fit-content;
+    font-size: 20px;
+  }
+  #services .about-description {
+    font-size: 25px;
+  }
+  #services .services-content {
+    flex-direction: column;
+  }
+  #services .services-list .item {
+    margin: 0;
+  }
+  #services .image-doctor-operating {
+    display: flex;
+    width: 100%;
+    padding-left: 13rem;
+    border-radius: 0.4rem;
+  }
+  #services .image-doctor-operating img {
+    height: 39dvh;
+    width: 70%;
+    border-radius: 0.4rem;
+  }
+  #services .services-list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 1rem 2rem;
+    font-size: 25px;
+  }
+  #services .services-list .item {
+    width: 40%;
+    font-size: 20px;
+  }
+  /* DOCTORS */
+  #doctors {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  #doctors form {
+    width: 100%;
+    padding: 3rem 1rem;
+    margin: 0rem;
+    align-items: center;
+  }
+  #doctors form .btn {
+    width: 10rem;
+    font-size: 22px;
+  }
+  #doctors form div {
+    width: 100%;
+  }
+  #doctors form input {
+    width: 60%;
+  }
+  #doctors .details {
+    font-size: 24px;
+  }
+  #doctors .doctors-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-left: 5rem;
+    padding-bottom: 2rem;
+  }
+  #doctors .doctors-list img {
+    width: 100%;
+  }
+  .doctor-1 {
+    font-size: 20px;
+  }
+
+  form {
+    flex-direction: column;
+    height: fit-content;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+  form div input {
+    margin: 1rem;
+  }
+  /* BOOK APP */
+  #book-appointment {
+    height: fit-content;
+    padding-bottom: 1rem;
+  }
+  #book-appointment .details {
+    font-size: 25px;
+  }
+  #book-appointment form {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #book-appointment form div {
+    width: 50%;
+  }
+  #book-appointment form input,
+  select {
+    font-size: 17px;
+    /* width: 30%; */
+  }
+  #book-appointment form label {
+    font-size: 20px;
+  }
+  #book-appointment .btn {
+    font-size: 20px;
+    width: fit-content;
+  }
+  /* CONTACTS */
+  #contacts {
+    height: fit-content;
+    padding-bottom: 0rem;
+  }
+  #contacts .details {
+    font-size: 25px;
+  }
+  #contactd form {
+    width: 100%;
+  }
+  #contacts form input {
+    width: 100%;
+  }
+  #contacts form div {
+    margin: 0.5rem;
+    width: 80%;
+    padding: 0rem;
+    font-size: 20px;
+  }
+  #contacts form div label {
+    width: 40%;
+  }
+
+  #contacts textarea {
+    width: 100%;
+    height: 10rem;
+  }
+  #contacts textarea,
+  #contacts textarea:focus {
+    font-size: 20px;
+  }
+  #contacts .bttn {
+    font-size: 25px;
+    width: 9rem;
+  }
+  /* EVENTS */
+  #events {
+    height: fit-content;
+  }
+  .events-feeds {
+    flex-direction: column;
+    margin-left: 9rem;
+  }
+  .events-list {
+    width: 70%;
+  }
+  .event-header .event-title {
+    height: 2.2rem;
+  }
+  .event-body p,
+  div {
+    font-size: 24px;
+  }
+  .event-title,
+  #events .btn {
+    font-size: 24px;
+  }
+
+  /* FOOTER */
+  footer {
+    height: fit-content;
+    padding: 4rem;
+    padding-bottom: 0.3rem;
+  }
+  .footer-body {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .footer-body .col-1,
+  .col-2 {
+    width: 100%;
+    padding: 0;
+    border: 0;
+  }
+  .col-2 form {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+  }
+  .footer-body .col-1 {
+    font-size: 20px;
+  }
+  .footer-body .col-2 {
+    font-size: 25px;
+  }
+  .col-2 form input {
+    padding: 0 1rem;
+    width: 60%;
+    height: 2.5rem;
+    font-size: 20px;
+  }
+  footer .btn {
+    width: 30%;
+  }
+  .social-icons img {
+    width: 45px;
+    height: 45px;
+    margin: 1rem;
+  }
+  .copy-right {
+    font-size: 19px;
   }
 }
-@media screen and (min-device-width: 993px) and (max-device-width: 1200px) {
-  body {
-    background: cyan;
-  }
-} */
